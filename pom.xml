@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.springframework.security.extensions</groupId>
-  <artifactId>spring-security-saml2-sample</artifactId>
+  <artifactId>spring-security-saml2-local</artifactId>
   <packaging>war</packaging>
   <version>1.0.0.RELEASE-SNAPSHOT</version>
   <name>Spring Security SAML v2 sample webapp</name>
@@ -83,7 +83,7 @@
     </repository>
   </repositories>
   <build>
-    <finalName>spring-security-saml2-sample</finalName>
+    <finalName>spring-security-saml2-local</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -98,7 +98,7 @@
         <artifactId>tomcat7-maven-plugin</artifactId>
         <version>2.2</version>
         <configuration>
-          <path>/spring-security-saml2-sample</path>
+          <path>/spring-security-saml2-local</path>
         </configuration>
       </plugin>
     </plugins>
