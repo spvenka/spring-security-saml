@@ -139,19 +139,20 @@
     <!-- IDP Metadata configuration - paths to metadata of IDPs in circle of trust is here -->
     <bean id="metadata" class="org.springframework.security.saml.metadata.CachingMetadataManager">
 		<constructor-arg>
-			<list>
-				<bean class="org.opensaml.saml2.metadata.provider.HTTPMetadataProvider">
-					<constructor-arg>
-						<value type="java.lang.String">http://idp.ssocircle.com/idp-meta.xml</value>
-					</constructor-arg>
-					<constructor-arg>
-						<value type="int">5000</value>
-					</constructor-arg>
-					<property name="parserPool" ref="parserPool"/>
-				</bean>
+			<list>				
+                 <bean class="org.opensaml.saml2.metadata.provider.FilesystemMetadataProvider">
+                     <constructor-arg>
+                         <value type="java.io.File">classpath:metadata/idp-meta.xml</value>
+                     </constructor-arg>
+                     <property name="parserPool" ref="parserPool"/>
+                 </bean>
+				
 			</list>
 		</constructor-arg>
-	</bean>
+		
+           
+		
+	</bean>    
 
     <!-- SAML Authentication Provider responsible for validating of received SAML messages -->
     <bean id="samlAuthenticationProvider" class="org.springframework.security.saml.SAMLAuthenticationProvider">

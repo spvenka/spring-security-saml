@@ -31,7 +31,7 @@
                                 <br/>
                             </c:forEach>
                             <br>
-                            <input class="button" type="submit" value="Start single sign-on"/>
+                            <input class="button" type="submit" value="Login"/>
                         </form>
                     </div>
                 </div>
